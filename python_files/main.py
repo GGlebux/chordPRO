@@ -7,7 +7,9 @@ from python_files.database import Database
 
 if __name__ == "__main__":
     with Database() as db:
+        db.insert_chords_from_csv()
         app = QApplication(sys.argv)
         window = MainApp(db)
         window.show()
         sys.exit(app.exec())
+

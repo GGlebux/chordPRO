@@ -16,6 +16,8 @@
    1. GUI - ==pyQt6==
    2. Data Base - ==sqlite3==
    3. ORM for Data Base - ==SQLAlchemy==
+   4. Библиотеки для работы со звуком - scipy, sounddevice, soundfile
+   5. Numpy 
 ## 3) Архитектура проекта:
 ##### Файлы:
 
