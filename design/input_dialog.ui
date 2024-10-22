@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>395</width>
+    <height>333</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Введите данные</string>
+  </property>
+  <layout class="QFormLayout" name="formLayout">
+   <item row="0" column="0">
+    <widget class="QLabel" name="label_3">
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string>Нота:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="1">
+    <widget class="QComboBox" name="input_note_box">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="editable">
+      <bool>false</bool>
+     </property>
+     <item>
+      <property name="text">
+       <string>A#</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>C#</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>D#</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>F#</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>G#</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Ab</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Bb</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Cb</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Db</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Eb</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Gb</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>A</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>B</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>C</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>D</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>E</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>F</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>G</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QLabel" name="label_5">
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string>Тип:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1">
+    <widget class="QComboBox" name="input_type_box">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="editable">
+      <bool>true</bool>
+     </property>
+     <property name="currentText">
+      <string notr="true">13</string>
+     </property>
+     <property name="insertPolicy">
+      <enum>QComboBox::InsertAtBottom</enum>
+     </property>
+     <property name="sizeAdjustPolicy">
+      <enum>QComboBox::AdjustToContents</enum>
+     </property>
+     <property name="placeholderText">
+      <string/>
+     </property>
+     <property name="modelColumn">
+      <number>0</number>
+     </property>
+     <item>
+      <property name="text">
+       <string>13</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>7(#9)</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>9</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>9b5</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>7</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>dim7</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>aug</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>maj</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>11</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>maj9</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>m</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>7b5</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>m7</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>dim</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>6</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>7(#5)</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>7sus4</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>maj7</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>5</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>m6</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>7(b9)</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>m9</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>sus4</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>6-Sep</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>m11</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>m7b5</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>9(#11)</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>9(#5)</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>7(#11)</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>maj13</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>6(#11)</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>sus2</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>m(maj7)</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>13(b9)</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>+(#11)</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>13(#11)</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>7(b13)</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>add9</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>13(#9)</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>m13</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>m6/9</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>m(maj9)</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="2" column="0">
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>Аппликатура:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="1">
+    <widget class="QLineEdit" name="input_figner_position"/>
+   </item>
+   <item row="3" column="0">
+    <widget class="QLabel" name="label_6">
+     <property name="text">
+      <string>Структура:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="1">
+    <widget class="QLineEdit" name="input_structure"/>
+   </item>
+   <item row="4" column="0">
+    <widget class="QLabel" name="label_4">
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string>Сложность:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="1">
+    <widget class="QComboBox" name="input_diff_box">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="editable">
+      <bool>false</bool>
+     </property>
+     <item>
+      <property name="text">
+       <string>None</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>beginner</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>intermediate</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>advanced</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="5" column="1">
+    <widget class="QPushButton" name="save_button">
+     <property name="text">
+      <string>Сохранить</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

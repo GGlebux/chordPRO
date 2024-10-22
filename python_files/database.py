@@ -1,7 +1,5 @@
 import csv
-import os
-from pprint import pprint
-from sqlite3 import connect
+
 
 from sqlalchemy import create_engine, select
 from sqlalchemy.orm import sessionmaker, Session
@@ -59,7 +57,7 @@ class Database:
     def insert_chord(self, chord):
         """Добавляет новый аккорд в базу данных."""
 
-        pass
+        self.session.add(chord)
 
     def get_chords(self):
         """Возвращает список всех аккордов."""
@@ -69,7 +67,7 @@ class Database:
     def get_chord(self, id, root=None, style=None, structure=None, finger_position=None):
         """Возвращает аккорд по указанным параметрам."""
 
-        pass
+        return self.session.query(id)
 
     def update_chord(self, chord):
         """Обновляет данные аккорда."""
@@ -78,5 +76,7 @@ class Database:
 
     def delete_chord(self, id):
         """Удаляет аккорд из базы данных."""
-
+        # ToDo: Тут нельзя использовать номер строки в таблцие для удаления по id из бд
+        print("Удаляю")
+        self.session.query(Chord).filter_by(id=id).delete()
         pass

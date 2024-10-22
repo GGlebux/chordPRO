@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>906</width>
-    <height>432</height>
+    <width>1168</width>
+    <height>552</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -46,7 +46,7 @@
            <string>ID:</string>
           </property>
          </widget>
-         <widget class="QSpinBox" name="spinBox">
+         <widget class="QSpinBox" name="id_box">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
             <horstretch>0</horstretch>
@@ -75,7 +75,7 @@
            <string>Нота:</string>
           </property>
          </widget>
-         <widget class="QComboBox" name="comboBox">
+         <widget class="QComboBox" name="note_box">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
             <horstretch>0</horstretch>
@@ -191,7 +191,7 @@
            <string>Тип:</string>
           </property>
          </widget>
-         <widget class="QComboBox" name="comboBox_2">
+         <widget class="QComboBox" name="type_box">
           <property name="enabled">
            <bool>true</bool>
           </property>
@@ -451,7 +451,7 @@
            <string>Сложность:</string>
           </property>
          </widget>
-         <widget class="QComboBox" name="comboBox_3">
+         <widget class="QComboBox" name="diff_box">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
             <horstretch>0</horstretch>
@@ -492,7 +492,7 @@
            <string>Добавленный:</string>
           </property>
          </widget>
-         <widget class="QComboBox" name="comboBox_4">
+         <widget class="QComboBox" name="user_defined_box">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
             <horstretch>0</horstretch>
@@ -719,22 +719,22 @@ QTableWidget::item:focus {
          <property name="orientation">
           <enum>Qt::Vertical</enum>
          </property>
-         <widget class="QPushButton" name="addButton">
+         <widget class="QPushButton" name="add_button">
           <property name="text">
            <string>Добавить</string>
           </property>
          </widget>
-         <widget class="QPushButton" name="removeButton">
+         <widget class="QPushButton" name="remove_button">
           <property name="text">
            <string>Удалить</string>
           </property>
          </widget>
-         <widget class="QPushButton" name="editButton">
+         <widget class="QPushButton" name="edit_button">
           <property name="text">
            <string>Изменить</string>
           </property>
          </widget>
-         <widget class="QPushButton" name="uptadeButton">
+         <widget class="QPushButton" name="update_button">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
             <horstretch>0</horstretch>
@@ -770,7 +770,7 @@ QTableWidget::item:focus {
      <string>TextLabel</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="viewButton">
+   <widget class="QPushButton" name="view_button">
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -793,16 +793,16 @@ QTableWidget::item:focus {
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <tabstops>
-  <tabstop>spinBox</tabstop>
-  <tabstop>comboBox</tabstop>
-  <tabstop>comboBox_2</tabstop>
-  <tabstop>comboBox_3</tabstop>
-  <tabstop>comboBox_4</tabstop>
+  <tabstop>id_box</tabstop>
+  <tabstop>note_box</tabstop>
+  <tabstop>type_box</tabstop>
+  <tabstop>diff_box</tabstop>
+  <tabstop>user_defined_box</tabstop>
   <tabstop>searchButton</tabstop>
-  <tabstop>removeButton</tabstop>
-  <tabstop>editButton</tabstop>
-  <tabstop>addButton</tabstop>
-  <tabstop>uptadeButton</tabstop>
+  <tabstop>remove_button</tabstop>
+  <tabstop>edit_button</tabstop>
+  <tabstop>add_button</tabstop>
+  <tabstop>update_button</tabstop>
  </tabstops>
  <resources/>
  <connections/>

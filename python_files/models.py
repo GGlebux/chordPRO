@@ -4,13 +4,12 @@ from sqlalchemy.orm import Mapped, DeclarativeBase, MappedAsDataclass
 from sqlalchemy.testing.schema import mapped_column
 
 
-# reg = registry()
 
 class Base(MappedAsDataclass, DeclarativeBase):
     pass
 
 
-# @reg.mapped_as_dataclass
+
 class Chord(Base):
     __tablename__ = 'chords'
 
