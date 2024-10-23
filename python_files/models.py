@@ -33,5 +33,13 @@ class Chord(Base):
         return (f"<Chord(id='{self.id}' root='{self.root}', type='{self.style}', " +
                 f"finger_position='{self.finger_position}, structure='{self.structure}'')>")
 
-    def get_id(self):
-        return self.id
+    def super_getter(self):
+        return [
+                str(self.id),
+                self.root,
+                self.style,
+                self.finger_position,
+                self.structure,
+                self.difficulty,
+                str(self.user_defined)
+            ]

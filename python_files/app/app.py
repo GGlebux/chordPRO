@@ -2,7 +2,7 @@ from pprint import pprint
 
 from PyQt6.QtCore import Qt
 from PyQt6.QtGui import QPixmap
-from PyQt6.QtWidgets import QMainWindow, QTableWidgetItem, QAbstractItemView, QSizePolicy
+from PyQt6.QtWidgets import QMainWindow, QTableWidgetItem, QAbstractItemView, QSizePolicy, QMessageBox
 from sqlalchemy.orm.sync import clear
 
 from design.main_desing import Ui_MainWindow
@@ -16,45 +16,33 @@ class MainApp(QMainWindow, Ui_MainWindow):
         self.db = db
 
         self.setupUi(self)
-        self.setWindowState(Qt.WindowState.WindowMaximized)
+        # self.setWindowState(Qt.WindowState.WindowMaximized)
         # self.pixmap = QPixmap('../resources/guitar_neck.png')
         # self.image.setPixmap(self.pixmap)
         # self.image.setFixedSize(1028, 630)
 
-        self.rows = -1
-
         self.add_button.clicked.connect(self.open_input_dialog)
         self.remove_button.clicked.connect(self.delete_chord)
         self.edit_button.clicked.connect(self.edit_chord)
-        self.update_button.clicked.connect(lambda: self.update_table(self.db.get_chords()))
+        self.update_button.clicked.connect(self.update_table)
 
-    def update_table(self, chords):
+    def update_table(self):
         """Отображает в таблице всё аккорды из БД"""
         self.empty_interface()
+        chords = self.db.get_chords()
         for chord in chords:
             row_count = self.table.rowCount()
             self.table.setRowCount(row_count + 1)
-            row_data = [
-                chord.root,
-                chord.style,
-                chord.finger_position,
-                chord.structure,
-                chord.difficulty,
-                str(chord.user_defined)
-            ]
+            row_data = chord.super_getter()
+
             for i, value in enumerate(row_data):
                 item = QTableWidgetItem(value)
                 self.table.setItem(row_count, i, item)
-        self.ggwp()
+        new_row = self.table.rowCount()
+        self.table.setCurrentCell(new_row, 1)
 
     def add_chord(self, row_data):
-        """Добавляет пользовательский аккорд в таблицу"""
-        new_row = self.table.rowCount()
-        self.table.insertRow(new_row)
-        self.rows = self.table.rowCount()
-        for i, value in enumerate(row_data):
-            self.table.setItem(new_row, i, QTableWidgetItem(value))
-        self.table.setCurrentCell(new_row, 0)
+        """Добавляет пользовательский аккорд в таблицу и дб"""
         chord = Chord(
             root=row_data[0],
             style=row_data[1],
@@ -64,16 +52,29 @@ class MainApp(QMainWindow, Ui_MainWindow):
             user_defined=bool(row_data[4])
         )
         self.db.insert_chord(chord)
+        self.update_table()
 
     def delete_chord(self):
         """Удаляет пользовательский аккорд из таблицы"""
-        id = self.table.currentIndex().row() + 1
-        self.db.delete_chord(id)
+        cur_row = self.table.currentRow()
+        if cur_row != -1:
+            id = int(self.table.item(cur_row, 0).text())
+            user_defined = True if self.table.item(cur_row, 6).text() == 'True' else False
+            if user_defined:
+                self.db.delete_chord(id)
+                self.update_table()
+            else:
+                QMessageBox.warning(self, 'Ошибка', 'Вы можете удалить только пользовательские аккорды!')
 
     def edit_chord(self):
         """Изменяет пользовательский аккорд в таблице"""
-        pass
+        cur_row = self.table.currentRow()
+        if cur_row != -1:
+            id = int(self.table.item(cur_row, 0).text())
+            user_defined = True if self.table.item(cur_row, 6).text() == 'True' else False
+        if user_defined:
 
+            pass
 
     def empty_interface(self):
         self.table.clearContents()
@@ -86,8 +87,7 @@ class MainApp(QMainWindow, Ui_MainWindow):
 
     def ggwp(self):
         chords = self.db.get_chords()
-        pprint(chords[-1])
-        pprint('Элементов в бд === ' + str(len(chords)))
+        print('Элементов в бд === ' + str(len(chords)))
 
     def open_input_dialog(self):
         dialog = InputDialog(self, self)

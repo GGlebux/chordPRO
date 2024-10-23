@@ -77,6 +77,4 @@ class Database:
     def delete_chord(self, id):
         """Удаляет аккорд из базы данных."""
         # ToDo: Тут нельзя использовать номер строки в таблцие для удаления по id из бд
-        print("Удаляю")
         self.session.query(Chord).filter_by(id=id).delete()
-        pass

@@ -212,7 +212,7 @@ class Ui_Dialog(object):
         self.label.setText(_translate("Dialog", "Аппликатура:"))
         self.label_6.setText(_translate("Dialog", "Структура:"))
         self.label_4.setText(_translate("Dialog", "Сложность:"))
-        self.input_diff_box.setItemText(0, _translate("Dialog", "None"))
+        self.input_diff_box.setItemText(0, _translate("Dialog", "-"))
         self.input_diff_box.setItemText(1, _translate("Dialog", "beginner"))
         self.input_diff_box.setItemText(2, _translate("Dialog", "intermediate"))
         self.input_diff_box.setItemText(3, _translate("Dialog", "advanced"))
