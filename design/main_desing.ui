@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1168</width>
-    <height>552</height>
+    <width>1138</width>
+    <height>864</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -21,498 +21,563 @@
   }</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <layout class="QVBoxLayout" name="verticalLayout_2">
+   <layout class="QVBoxLayout" name="verticalLayout_3">
     <item>
      <layout class="QHBoxLayout" name="horizontalLayout_2">
       <item>
-       <widget class="QSplitter" name="splitter">
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
+       <widget class="QLabel" name="label">
+        <property name="maximumSize">
+         <size>
+          <width>20</width>
+          <height>30</height>
+         </size>
         </property>
-        <widget class="QLabel" name="label">
-         <property name="styleSheet">
-          <string notr="true">color: white;</string>
-         </property>
-         <property name="text">
-          <string>ID:</string>
-         </property>
-        </widget>
-        <widget class="QSpinBox" name="id_box">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
-         </property>
-         <property name="minimum">
-          <number>1</number>
-         </property>
-         <property name="maximum">
-          <number>5000</number>
-         </property>
-        </widget>
+        <property name="styleSheet">
+         <string notr="true">color: white;</string>
+        </property>
+        <property name="text">
+         <string>ID:</string>
+        </property>
        </widget>
       </item>
       <item>
-       <widget class="QSplitter" name="splitter_3">
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
-        <widget class="QLabel" name="label_2">
-         <property name="styleSheet">
-          <string notr="true">color: white;</string>
-         </property>
-         <property name="text">
-          <string>Нота:</string>
-         </property>
-        </widget>
-        <widget class="QComboBox" name="note_box">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
-         </property>
-         <property name="editable">
-          <bool>false</bool>
-         </property>
-         <item>
-          <property name="text">
-           <string>A#</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>C#</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>D#</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>F#</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>G#</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Ab</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Bb</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Cb</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Db</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Eb</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Gb</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>A</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>B</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>C</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>D</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>E</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>F</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>G</string>
-          </property>
-         </item>
-        </widget>
-       </widget>
-      </item>
-      <item>
-       <widget class="QSplitter" name="splitter_4">
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
-        <widget class="QLabel" name="label_3">
-         <property name="styleSheet">
-          <string notr="true">color: white;</string>
-         </property>
-         <property name="text">
-          <string>Тип:</string>
-         </property>
-        </widget>
-        <widget class="QComboBox" name="type_box">
-         <property name="enabled">
-          <bool>true</bool>
-         </property>
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
-         </property>
-         <property name="maximumSize">
-          <size>
-           <width>16777215</width>
-           <height>16777215</height>
-          </size>
-         </property>
-         <property name="editable">
-          <bool>true</bool>
-         </property>
-         <property name="currentText">
-          <string notr="true">13</string>
-         </property>
-         <property name="insertPolicy">
-          <enum>QComboBox::InsertAtBottom</enum>
-         </property>
-         <property name="sizeAdjustPolicy">
-          <enum>QComboBox::AdjustToContents</enum>
-         </property>
-         <property name="placeholderText">
-          <string/>
-         </property>
-         <property name="modelColumn">
-          <number>0</number>
-         </property>
-         <item>
-          <property name="text">
-           <string>13</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>7(#9)</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>9</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>9b5</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>7</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>dim7</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>aug</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>maj</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>11</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>maj9</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>m</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>7b5</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>m7</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>dim</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>6</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>7(#5)</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>7sus4</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>maj7</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>5</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>m6</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>7(b9)</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>m9</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>sus4</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>6-Sep</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>m11</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>m7b5</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>9(#11)</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>9(#5)</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>7(#11)</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>maj13</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>6(#11)</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>sus2</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>m(maj7)</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>13(b9)</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>+(#11)</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>13(#11)</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>7(b13)</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>add9</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>13(#9)</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>m13</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>m6/9</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>m(maj9)</string>
-          </property>
-         </item>
-        </widget>
-       </widget>
-      </item>
-      <item>
-       <widget class="QSplitter" name="splitter_5">
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
-        <widget class="QLabel" name="label_4">
-         <property name="styleSheet">
-          <string notr="true">color: white;</string>
-         </property>
-         <property name="text">
-          <string>Сложность:</string>
-         </property>
-        </widget>
-        <widget class="QComboBox" name="diff_box">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
-         </property>
-         <property name="editable">
-          <bool>false</bool>
-         </property>
-         <item>
-          <property name="text">
-           <string>beginner</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>intermediate</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>advanced</string>
-          </property>
-         </item>
-        </widget>
-       </widget>
-      </item>
-      <item>
-       <widget class="QSplitter" name="splitter_6">
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
-        <widget class="QLabel" name="label_5">
-         <property name="styleSheet">
-          <string notr="true">color: white;</string>
-         </property>
-         <property name="text">
-          <string>Добавленный:</string>
-         </property>
-        </widget>
-        <widget class="QComboBox" name="user_defined_box">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
-         </property>
-         <property name="editable">
-          <bool>false</bool>
-         </property>
-         <item>
-          <property name="text">
-           <string>Yes</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>No</string>
-          </property>
-         </item>
-        </widget>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="searchButton">
+       <widget class="QSpinBox" name="id_box">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
           <horstretch>0</horstretch>
           <verstretch>0</verstretch>
          </sizepolicy>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>50</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="minimum">
+         <number>0</number>
+        </property>
+        <property name="maximum">
+         <number>5000</number>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_2">
+        <property name="maximumSize">
+         <size>
+          <width>39</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: white;</string>
+        </property>
+        <property name="text">
+         <string>Нота:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="note_box">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>50</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="editable">
+         <bool>false</bool>
+        </property>
+        <item>
+         <property name="text">
+          <string/>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>A#</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>C#</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>D#</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>F#</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>G#</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Ab</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Bb</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Cb</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Db</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Eb</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Gb</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>A</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>B</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>C</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>D</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>E</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>F</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>G</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_3">
+        <property name="maximumSize">
+         <size>
+          <width>30</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: white;</string>
+        </property>
+        <property name="text">
+         <string>Тип:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="type_box">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>90</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="editable">
+         <bool>true</bool>
+        </property>
+        <property name="currentText">
+         <string notr="true"/>
+        </property>
+        <property name="insertPolicy">
+         <enum>QComboBox::InsertAtBottom</enum>
+        </property>
+        <property name="sizeAdjustPolicy">
+         <enum>QComboBox::AdjustToContents</enum>
+        </property>
+        <property name="placeholderText">
+         <string/>
+        </property>
+        <property name="modelColumn">
+         <number>0</number>
+        </property>
+        <item>
+         <property name="text">
+          <string/>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>13</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>7(#9)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>9</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>9b5</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>7</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>dim7</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>aug</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>maj</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>11</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>maj9</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>m</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>7b5</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>m7</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>dim</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>6</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>7(#5)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>7sus4</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>maj7</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>5</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>m6</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>7(b9)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>m9</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>sus4</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>6-Sep</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>m11</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>m7b5</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>9(#11)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>9(#5)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>7(#11)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>maj13</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>6(#11)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>sus2</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>m(maj7)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>13(b9)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>+(#11)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>13(#11)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>7(b13)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>add9</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>13(#9)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>m13</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>m6/9</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>m(maj9)</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_4">
+        <property name="maximumSize">
+         <size>
+          <width>85</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: white;</string>
+        </property>
+        <property name="text">
+         <string>Сложность:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="diff_box">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>115</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="editable">
+         <bool>false</bool>
+        </property>
+        <item>
+         <property name="text">
+          <string/>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>beginner</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>intermediate</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>advanced</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_5">
+        <property name="maximumSize">
+         <size>
+          <width>104</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: white;</string>
+        </property>
+        <property name="text">
+         <string>Добавленный:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="user_defined_box">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>60</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="editable">
+         <bool>false</bool>
+        </property>
+        <item>
+         <property name="text">
+          <string/>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>True</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>False</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="search_button">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>100</width>
+          <height>30</height>
+         </size>
         </property>
         <property name="focusPolicy">
          <enum>Qt::StrongFocus</enum>
@@ -537,6 +602,19 @@
         </property>
        </widget>
       </item>
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
      </layout>
     </item>
     <item>
@@ -556,6 +634,12 @@
          <size>
           <width>0</width>
           <height>200</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>1000</width>
+          <height>500</height>
          </size>
         </property>
         <property name="styleSheet">
@@ -683,9 +767,10 @@ QTableWidget::item:focus {
          </property>
          <property name="font">
           <font>
-           <family>Serif</family>
-           <italic>true</italic>
+           <family>Ubuntu</family>
+           <italic>false</italic>
            <bold>false</bold>
+           <kerning>true</kerning>
           </font>
          </property>
         </column>
@@ -718,8 +803,17 @@ QTableWidget::item:focus {
       </item>
       <item>
        <layout class="QVBoxLayout" name="verticalLayout">
+        <property name="spacing">
+         <number>0</number>
+        </property>
         <item>
          <widget class="QPushButton" name="add_button">
+          <property name="maximumSize">
+           <size>
+            <width>70</width>
+            <height>16777215</height>
+           </size>
+          </property>
           <property name="text">
            <string>Добавить</string>
           </property>
@@ -727,6 +821,12 @@ QTableWidget::item:focus {
         </item>
         <item>
          <widget class="QPushButton" name="remove_button">
+          <property name="maximumSize">
+           <size>
+            <width>70</width>
+            <height>16777215</height>
+           </size>
+          </property>
           <property name="text">
            <string>Удалить</string>
           </property>
@@ -734,6 +834,12 @@ QTableWidget::item:focus {
         </item>
         <item>
          <widget class="QPushButton" name="edit_button">
+          <property name="maximumSize">
+           <size>
+            <width>70</width>
+            <height>16777215</height>
+           </size>
+          </property>
           <property name="text">
            <string>Изменить</string>
           </property>
@@ -746,6 +852,12 @@ QTableWidget::item:focus {
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>70</width>
+            <height>16777215</height>
+           </size>
           </property>
           <property name="text">
            <string>Обновить</string>
@@ -767,33 +879,76 @@ QTableWidget::item:focus {
         </item>
        </layout>
       </item>
+      <item>
+       <spacer name="horizontalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
      </layout>
     </item>
     <item>
-     <widget class="QPushButton" name="view_button">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
+     <widget class="QLabel" name="len_table">
       <property name="text">
-       <string>Отобразить</string>
+       <string/>
       </property>
      </widget>
     </item>
     <item>
-     <widget class="QLabel" name="image">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
+     <spacer name="verticalSpacer_2">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
       </property>
-      <property name="text">
-       <string>TextLabel</string>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>40</height>
+       </size>
       </property>
-     </widget>
+     </spacer>
+    </item>
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <widget class="QPushButton" name="view_button">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="text">
+         <string>Отобразить</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="image">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>700</width>
+          <height>300</height>
+         </size>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+     </layout>
     </item>
    </layout>
   </widget>
@@ -805,7 +960,7 @@ QTableWidget::item:focus {
   <tabstop>type_box</tabstop>
   <tabstop>diff_box</tabstop>
   <tabstop>user_defined_box</tabstop>
-  <tabstop>searchButton</tabstop>
+  <tabstop>search_button</tabstop>
   <tabstop>remove_button</tabstop>
   <tabstop>edit_button</tabstop>
   <tabstop>add_button</tabstop>

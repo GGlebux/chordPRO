@@ -1,5 +1,4 @@
 from sqlalchemy import String, Integer, Boolean
-from sqlalchemy.dialects import registry
 from sqlalchemy.orm import Mapped, DeclarativeBase, MappedAsDataclass
 from sqlalchemy.testing.schema import mapped_column
 
