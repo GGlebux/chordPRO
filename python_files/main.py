@@ -10,7 +10,6 @@ if __name__ == "__main__":
     # Проверка на наличие базы данных
     if os.path.exists('../resources/chords.db'):
         db = Database()
-        print("Я существую!")
     else:
         db = Database()
         db.insert_chords_from_csv()

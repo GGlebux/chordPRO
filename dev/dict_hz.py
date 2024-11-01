@@ -73,5 +73,3 @@ def guitat_position_to_hz(string, fret):
           (6, 11): 156}
 
     return hz[(string, fret)]
-
-print(guitat_position_to_hz(6, 11))

@@ -1,5 +1,3 @@
-from traceback import print_tb
-
 from python_files.models import Chord
 
 
@@ -8,7 +6,7 @@ def define_chord_difficulty(chord_data):
     Определяет сложность аккорда в зависимости от его параметров.
 
     Args:
-      chord_data: Список, содержащий данные об аккорде из CSV-файла:
+      chord_data: Список, содержащий данные об аккорде:
             [CHORD_ROOT, CHORD_TYPE, FINGER_POSITIONS, CHORD_STRUCTURE]
 
     Returns:
@@ -22,7 +20,7 @@ def define_chord_difficulty(chord_data):
     finger_positions = chord_data[2]
 
     # Считаем количество зажатых струн, включая глушение (x)
-    num_pressed_strings = len([pos for pos in finger_positions.split(',') if pos != 'x' and pos != ''])
+    num_pressed_strings = len(finger_positions)
 
     # Определяем сложность по формуле, учитывая тип аккорда
     difficulty = 0
@@ -68,7 +66,7 @@ def data_to_chord(data):
 
 
 def validate_and_convert(input_string):
-    """Проверяет строку на соответствие шаблону и преобразует ее в список."""
+    """Проверяет строку на соответствие шаблону аппликатуры и преобразует ее в список."""
 
     res = []
 
@@ -81,7 +79,7 @@ def validate_and_convert(input_string):
         if char == 'x':
             res.append(-2)
         elif char.isdigit():
-            if int(char) in range(0, 25):
+            if int(char) in range(0, 12):
                 res.append(int(char) - 1)
 
     if len(res) == 6:

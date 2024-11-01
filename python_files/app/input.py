@@ -1,6 +1,7 @@
-from PyQt6.QtWidgets import QDialog
+from PyQt6.QtWidgets import QDialog, QMessageBox
 
 from design.input_dialog import Ui_Dialog
+from dev.static_methods import define_chord_difficulty, validate_and_convert
 
 
 class InputDialog(QDialog, Ui_Dialog):
@@ -22,7 +23,6 @@ class InputDialog(QDialog, Ui_Dialog):
             self.input_structure.setText(data[4])
             self.input_diff_box.setCurrentText(data[5])
 
-
         self.save_button.clicked.connect(self.save_form)
 
     def save_form(self):
@@ -31,8 +31,16 @@ class InputDialog(QDialog, Ui_Dialog):
         style = self.input_type_box.currentText()
         fingering = self.input_figner_position.text()
         structure = self.input_structure.text()
-        diff = self.input_diff_box.currentText()
-        # ToDo: Подключить автоматическую проверку на сложность аккорда при отсутвии данных из модуля {dev}
+
+        # Автопроверка сложности
+        finger = validate_and_convert(fingering)
+        if self.auto_diff.isChecked() and finger and self.input_diff_box.currentText() != '-':
+            diff = define_chord_difficulty([note, style, finger, structure])
+        else:
+            diff = self.input_diff_box.currentText()
+            QMessageBox.warning(self, 'Предупреждение',
+                                'Аппликатура некорректна\n(некоторые функции могут не работать)')
+
         form_data = {'id': self.id,
                      'root': note,
                      'style': style,
@@ -40,6 +48,7 @@ class InputDialog(QDialog, Ui_Dialog):
                      'structure': structure if structure else '-',
                      'difficulty': diff,
                      'user_defined': True}
+
         if self.is_edit:
             self.main_app.save_edit_chord(form_data)
         else:

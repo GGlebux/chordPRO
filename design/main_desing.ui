@@ -930,6 +930,19 @@ QTableWidget::item:focus {
        </widget>
       </item>
       <item>
+       <widget class="QPushButton" name="sound_button">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="text">
+         <string>Прослушать</string>
+        </property>
+       </widget>
+      </item>
+      <item>
        <widget class="QLabel" name="image">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
@@ -953,6 +966,21 @@ QTableWidget::item:focus {
    </layout>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1138</width>
+     <height>23</height>
+    </rect>
+   </property>
+  </widget>
+  <action name="actionidentify_chord">
+   <property name="text">
+    <string>identify chord</string>
+   </property>
+  </action>
  </widget>
  <tabstops>
   <tabstop>id_box</tabstop>
