@@ -147,7 +147,6 @@ class MainApp(QMainWindow, Ui_MainWindow):
                 input_data['difficulty'] = diff
             if user_defined:
                 input_data['user_defined'] = True if user_defined == 'True' else False
-            print('first === ', root, chord_style, diff, user_defined)
         try:
             chords = self.db.get_chord(chord_id=chord_id, data=input_data)
             self.update_table(is_all=False, data=chords)

@@ -18,4 +18,3 @@ if __name__ == "__main__":
     window = MainApp(db)
     window.show()
     sys.exit(app.exec())
-

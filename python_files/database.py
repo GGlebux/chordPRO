@@ -56,7 +56,7 @@ class Database:
         """Возвращает аккорд(ы) по указанным параметрам."""
         res = None
         if chord_id:
-            res =  [self.sex.query(Chord).filter_by(id=chord_id).one()]
+            res = [self.sex.query(Chord).filter_by(id=chord_id).one()]
         if data:
             res = self.sex.query(Chord).filter_by(**data).all()
         return res

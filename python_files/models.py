@@ -3,10 +3,8 @@ from sqlalchemy.orm import Mapped, DeclarativeBase, MappedAsDataclass
 from sqlalchemy.testing.schema import mapped_column
 
 
-
 class Base(MappedAsDataclass, DeclarativeBase):
     pass
-
 
 
 class Chord(Base):
@@ -20,7 +18,8 @@ class Chord(Base):
     difficulty: Mapped[str] = mapped_column(String(15), nullable=True)
     user_defined: Mapped[bool] = mapped_column(Boolean)
 
-    def __init__(self, root: str, style: str, finger_position: str, structure: str, difficulty: str, user_defined: bool):
+    def __init__(self, root: str, style: str, finger_position: str, structure: str, difficulty: str,
+                 user_defined: bool):
         self.root = root
         self.style = style
         self.finger_position = finger_position
@@ -34,11 +33,11 @@ class Chord(Base):
 
     def super_getter(self):
         return [
-                str(self.id),
-                self.root,
-                self.style,
-                self.finger_position,
-                self.structure,
-                self.difficulty,
-                str(self.user_defined)
-            ]
+            str(self.id),
+            self.root,
+            self.style,
+            self.finger_position,
+            self.structure,
+            self.difficulty,
+            str(self.user_defined)
+        ]
